@@ -86,11 +86,11 @@ namespace MyShopAdmin
 							.Where(p => p.GetValue(Store) is string && p.CanRead && p.CanWrite && p.Name != "State") // selecting only string props
 							.Any(p => string.IsNullOrWhiteSpace((p.GetValue(Store) as string)));
 
-						if(isAnyPropEmpty || !parse1 || !parse2)
-						{
-							await DisplayAlert("Not Valid", "Some fields are not valid, please check", "OK");
-							return;
-						}
+						//if(isAnyPropEmpty || !parse1 || !parse2)
+						//{
+						//	await DisplayAlert("Not Valid", "Some fields are not valid, please check", "OK");
+						//	return;
+						//}
 						Title = "SAVING...";
 						if(isNew)
 						{

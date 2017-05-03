@@ -11,9 +11,10 @@ namespace MyShop
         StoreViewModel viewModel;
         public StorePage(Store store)
         {
+            BindingContext = viewModel = new StoreViewModel(store, this);
             InitializeComponent();
 
-            BindingContext = viewModel = new StoreViewModel(store, this);
+
 
         }
 
