@@ -11,9 +11,8 @@ namespace MyShop
         StoreViewModel viewModel;
         public StorePage(Store store)
         {
-            InitializeComponent();
-
             BindingContext = viewModel = new StoreViewModel(store, this);
+            InitializeComponent();
 
         }
 
@@ -31,8 +30,8 @@ namespace MyShop
             MyMap.Pins.Add(pin);
 
             MyMap.MoveToRegion(
-                MapSpan.FromCenterAndRadius(
-                    position, Distance.FromMiles(.2)));
+            MapSpan.FromCenterAndRadius(
+            position, Distance.FromMiles(.2)));
         }
     }
 }
