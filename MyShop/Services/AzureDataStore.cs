@@ -13,7 +13,7 @@ using Xamarin.Forms;
 using MyShop;
 using Plugin.Connectivity;
 
-//[assembly: Dependency(typeof(AzureDataStore))]
+[assembly: Dependency(typeof(AzureDataStore))]
 namespace MyShop
 {
     public class AzureDataStore : IDataStore
@@ -29,7 +29,8 @@ namespace MyShop
             // This is a sample read-only azure site for demo
             // Follow the readme.md in the GitHub repo on how to setup your own.
             MobileService = new MobileServiceClient(
-            "http://myshoppe-demo.azurewebsites.net");
+                "http://mycityshopper.azurewebsites.net");
+
         }
 
         public async Task Init()
