@@ -96,9 +96,6 @@ namespace MyShop
 
         private async Task ExecuteGetStoresCommand()
         {
-            if (IsBusy)
-                return;
-
             if (ForceSync)
                 Settings.LastSync = DateTime.Now.AddDays(-30);
 
@@ -128,7 +125,7 @@ namespace MyShop
             }
 
             if (showAlert)
-                await page.DisplayAlert("Uh Oh :(", "Unable to gather stores.", "OK");
+                await page.DisplayAlert("Uh Oh :(", "Unable to gather stores. Try to refresh list", "OK");
 
 
         }
